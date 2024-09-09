@@ -9,16 +9,11 @@ export default function Form(props) {
 	return (
 		<StyledForm onSubmit={handleSubmit}>
 			<Heading>Bitte gib deine Bildbeschreibung ein :</Heading>
-			<Textarea>
-				Eine Luftaufnahme einer belebten Autobahnkreuzung im Herbst. Die Bäume
-				entlang der Straßen sind in warmen Gelb-, Orange- und Rottönen gefärbt.
-				Auf der linken Seite des Bildes, am Rande der Kreuzung, fährt ein
-				einzelnes rotes Auto. Das leuchtend rote Fahrzeug sticht zwischen den
-				anderen Verkehrsteilnehmern hervor und verleiht der herbstlichen Szene
-				einen besonderen Kontrast. Die Straßen sind voller Autos, die sich in
-				verschiedene Richtungen bewegen, während die Struktur der Kreuzung mit
-				ihren Brücken und Abzweigungen klar erkennbar ist.
-			</Textarea>
+			<Textarea
+				defaultValue={
+					'Eine Luftaufnahme einer belebten Autobahnkreuzung im Herbst. Die Bäume entlang der Straßen sind in warmen Gelb-, Orange- und Rottönen gefärbt. Auf der linken Seite des Bildes, am Rande der Kreuzung, fährt ein einzelnes rotes Auto. Das leuchtend rote Fahrzeug sticht zwischen den anderen Verkehrsteilnehmern hervor und verleiht der herbstlichen Szene einen besonderen Kontrast. Die Straßen sind voller Autos, die sich in verschiedene Richtungen bewegen, während die Struktur der Kreuzung mit ihren Brücken und Abzweigungen klar erkennbar ist.'
+				}
+			></Textarea>
 			<ButtonContainer>
 				<Button type="submit">
 					<Label>Bild generieren</Label>
@@ -31,7 +26,7 @@ export default function Form(props) {
 const StyledForm = styled.form`
 	width: 71.1rem;
 	margin: auto;
-	height: 59.3rem;
+	/* height: 59.3rem; */
 	display: flex;
 	justify-content: left;
 	align-items: top;

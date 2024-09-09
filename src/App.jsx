@@ -6,6 +6,8 @@ import './assets/fonts/fonts.css';
 import Header from './components/Header/Header.jsx';
 import Instructions from './components/Instructions/Instructions.jsx';
 import Form from './components/Form/Form.jsx';
+import Circles from './components/Circles/Circles.jsx';
+import GeneratedBanner from './components/GeneratedBanner/GeneratedBanner.jsx';
 
 function App() {
 	return (
@@ -14,6 +16,9 @@ function App() {
 			<BodyContainer>
 				<Instructions />
 				<Form />
+				<Circles isLoading={false} />
+				<GeneratedBanner />
+				<Circles isLoading={false} />
 			</BodyContainer>
 		</OuterContainer>
 	);
