@@ -5,6 +5,7 @@ import './assets/fonts/fonts.css';
 //components
 import Header from './components/Header/Header.jsx';
 import Instructions from './components/Instructions/Instructions.jsx';
+import Form from './components/Form/Form.jsx';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<Header />
 			<BodyContainer>
 				<Instructions />
+				<Form />
 			</BodyContainer>
 		</OuterContainer>
 	);
