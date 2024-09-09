@@ -2,9 +2,13 @@ import { styled } from 'styled-components';
 import './App.css';
 import './assets/fonts/fonts.css';
 
+//components
+import Header from './components/Header/Header.jsx';
+
 function App() {
 	return (
 		<OuterContainer id="OuterContainer">
+			<Header />
 			<BodyContainer>
 				<Title>Is it the T'ing ?</Title>
 			</BodyContainer>
