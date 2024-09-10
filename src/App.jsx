@@ -8,6 +8,7 @@ import Instructions from './components/Instructions/Instructions.jsx';
 import Form from './components/Form/Form.jsx';
 import Circles from './components/Circles/Circles.jsx';
 import GeneratedBanner from './components/GeneratedBanner/GeneratedBanner.jsx';
+import LinkBox from './components/LinkBox/LinkBox.jsx';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Circles isLoading={false} />
 				<GeneratedBanner />
 				<Circles isLoading={false} />
+				<LinkBox isLoading={false} />
 			</BodyContainer>
 		</OuterContainer>
 	);

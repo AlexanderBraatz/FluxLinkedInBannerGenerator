@@ -23,6 +23,8 @@ const Container = styled.div`
 	margin-top: 3rem;
 	position: relative;
 	margin-bottom: 5rem;
+	background-color: ${props => props.theme.desktop.grey2};
+	border-radius: 1rem;
 `;
 const Image = styled.img`
 	border-radius: 1rem;
