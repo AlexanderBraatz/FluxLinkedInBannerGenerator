@@ -5,10 +5,10 @@ import React from 'react';
 import Streets from './../../assets/images/Streets.png';
 import LinkedInAvatar from './../../assets/images/AvatarSquare.jpeg';
 
-export default function GeneratedBanner({ isLoading }) {
+export default function GeneratedBanner({ isLoading, bannerImage }) {
 	return (
 		<Container>
-			<Image src={Streets} />
+			<Image src={bannerImage} />
 			<AvatarContainer>
 				<Avatar src={LinkedInAvatar} />
 			</AvatarContainer>

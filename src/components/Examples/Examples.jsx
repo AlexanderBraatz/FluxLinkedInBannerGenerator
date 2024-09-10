@@ -30,8 +30,11 @@ let examplesData = [
 export default function Examples(props) {
 	return (
 		<Container>
-			{examplesData.map(exampleData => (
-				<Example data={exampleData} />
+			{examplesData.map((exampleData, i) => (
+				<Example
+					data={exampleData}
+					key={i}
+				/>
 			))}
 		</Container>
 	);
