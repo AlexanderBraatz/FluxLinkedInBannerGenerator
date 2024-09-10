@@ -9,6 +9,7 @@ import Form from './components/Form/Form.jsx';
 import Circles from './components/Circles/Circles.jsx';
 import GeneratedBanner from './components/GeneratedBanner/GeneratedBanner.jsx';
 import LinkBox from './components/LinkBox/LinkBox.jsx';
+import Examples from './components/Examples/Examples.jsx';
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 				<GeneratedBanner />
 				<Circles isLoading={false} />
 				<LinkBox isLoading={false} />
+				<Examples isLoading={false} />
 			</BodyContainer>
 		</OuterContainer>
 	);

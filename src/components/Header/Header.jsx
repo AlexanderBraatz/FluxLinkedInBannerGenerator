@@ -4,7 +4,7 @@ import React from 'react';
 export default function Header(props) {
 	return (
 		<Container>
-			<Heading>Linkedin Hintergrundbanner Generator</Heading>
+			<Heading>LinkedIn Hintergrundbanner Generator</Heading>
 		</Container>
 	);
 }
