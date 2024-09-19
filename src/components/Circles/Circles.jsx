@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import React, { useState, useEffect } from 'react';
 
-export default function Circles({ isLoading }) {
-	const [number, setNumber] = useState(7);
+export default function Circles({ isLoading, offSet }) {
+	const [number, setNumber] = useState(8 - offSet);
 
 	useEffect(() => {
 		let intervalId;
 		if (isLoading) {
 			intervalId = setInterval(() => {
-				setNumber(prevNumber => (prevNumber < 7 ? prevNumber + 1 : 1));
+				setNumber(prevNumber => (prevNumber < 8 ? prevNumber + 1 : 1));
 			}, 200);
 		} else {
 			setNumber(7);
@@ -50,12 +50,14 @@ const Circle = styled.div`
 	height: 20px;
 	border-radius: 50%;
 	background-color: ${props => props.theme.desktop.purple_light};
-	transition: 0.4s ease-out background-color;
+	transition: 0.4s ease-out background-color, 0.4s ease-out transform;
 
 	&.on {
+		transform: scale(1.2);
 		background-color: ${props => props.theme.desktop.purple_dark};
 	}
 	&.fading {
+		transform: scale(1.1);
 		background-color: ${props => props.theme.desktop.purple_medium};
 	}
 `;

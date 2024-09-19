@@ -2,18 +2,31 @@ import styled from 'styled-components';
 import React from 'react';
 
 //images
-import QRCode from './../../assets/images/QRCode.png';
+// import QRCode from './../../assets/images/QRCode.png';
+import QRCode from './../../assets/aiImages/qrImage.png';
 
-export default function LinkBox({ isLoading }) {
+export default function LinkBox({ isLoading, bannerImageURL }) {
 	return (
 		<Container>
-			<StyledQRCode src={QRCode} />
-			<LinkContainer href="https://google.com">
-				<Link>squirre.ls/awesome</Link>
-			</LinkContainer>
+			{isLoading ? (
+				<Empty></Empty>
+			) : (
+				<>
+					<StyledQRCode src={QRCode} />
+
+					<LinkContainer
+						target="_blank"
+						href={bannerImageURL}
+					>
+						<Link>Klick hier für dein Bild</Link>
+					</LinkContainer>
+				</>
+			)}
 		</Container>
 	);
 }
+
+const Empty = styled.div``;
 
 const Container = styled.div`
 	width: 22.3rem;

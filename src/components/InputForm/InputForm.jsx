@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import React from 'react';
 
-export default function InputForm({ handleTextareaChange, description }) {
-	const handleSubmit = e => {
-		e.preventDefault();
-		console.log('form has been submitted!');
-	};
+export default function InputForm({
+	handleTextareaChange,
+	description,
+	handleSubmit
+}) {
 	return (
 		<StyledForm onSubmit={handleSubmit}>
 			<Heading>Bitte gib deine Bildbeschreibung ein :</Heading>
@@ -15,7 +15,10 @@ export default function InputForm({ handleTextareaChange, description }) {
 				placeholder="Beschreiben Sie Ihr Bild detailliert…"
 			></Textarea>
 			<ButtonContainer>
-				<Button type="submit">
+				<Button
+					type="submit"
+					onClick={handleSubmit}
+				>
 					<Label>Bild generieren</Label>
 				</Button>
 			</ButtonContainer>

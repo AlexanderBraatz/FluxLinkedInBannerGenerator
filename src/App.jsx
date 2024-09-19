@@ -6,7 +6,8 @@ import './assets/fonts/fonts.css';
 import Header from './components/Header/Header.jsx';
 import Instructions from './components/Instructions/Instructions.jsx';
 import Form from './components/Form/Form.jsx';
-import ImageGenerator from './components/ImageGenerator/ImageGenerator.jsx';
+import TestImageGenerator from './components/ImageGenerator/TestImageGenerator.jsx';
+import TestForm from './components/ImageGenerator/TestForm.jsx';
 // import InputForm from './components/InputForm/InputForm.jsx';
 // import Circles from './components/Circles/Circles.jsx';
 // import GeneratedBanner from './components/GeneratedBanner/GeneratedBanner.jsx';
@@ -17,7 +18,8 @@ function App() {
 	return (
 		<OuterContainer id="OuterContainer">
 			<Header />
-			{/* <ImageGenerator /> */}
+			{/* <TestImageGenerator /> */}
+			{/* <TestForm /> */}
 			<BodyContainer>
 				<Instructions />
 				<Form />

@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import React from 'react';
 
-export default function Examples({ data }) {
+export default function Examples({ data, handleExampleSelection }) {
+	let example = data.description;
+
+	let handleClick = e => {
+		handleExampleSelection(example);
+	};
 	return (
 		<Container>
 			<ImageContainer>
@@ -11,7 +16,13 @@ export default function Examples({ data }) {
 				<Heading>Beschreibung:</Heading>
 				<Paragraph>{data.description}</Paragraph>
 				<ButtonContainer>
-					<Button type="action">
+					<Button
+						type="button"
+						// onClick={example => {
+						// 	handleExampleSelection(example);
+						// }}
+						onClick={e => handleClick(e)}
+					>
 						<Label>Beispiel übernehmen</Label>
 					</Button>
 				</ButtonContainer>
@@ -20,17 +31,19 @@ export default function Examples({ data }) {
 	);
 }
 
-const Container = styled.div`
+const Container = styled.form`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: ${props => props.theme.desktop.purple_light};
 	border-radius: 1rem;
 	width: 46.4rem;
+	overflow: hidden;
 `;
 
 const ImageContainer = styled.div`
 	width: 100%;
+	height: 12.7rem;
 	display: flex;
 	justify-content: center;
 `;
@@ -38,6 +51,9 @@ const ImageContainer = styled.div`
 const Image = styled.img`
 	max-width: 100%;
 	height: auto;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 `;
 
 const BodyContainer = styled.div`
